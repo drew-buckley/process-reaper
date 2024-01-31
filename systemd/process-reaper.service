@@ -1,0 +1,9 @@
+[Unit]
+Description=Process Reaper for cpptools
+
+[Service]
+Type=notify
+ExecStart=process-reaper -p cpptools -m 10GiB --syslog --systemd-notify 
+
+[Install]
+WantedBy=default.target
